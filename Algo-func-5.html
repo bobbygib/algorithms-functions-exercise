@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+// 5. Write function that translates a text to Pig Latin and back. English is translated to Pig Latin by taking the first letter of every word, moving it to the end of the word and adding "ay".
+
+// "The quick brown fox" -> "Hetay uickqay rownbay oxfay".
+
+	// function toPig(inEnglish) {
+ //    var finalString = "";
+ //    var wordArray = inEnglish.split(" ");
+ //    for (var i = 0; i < wordArray.length; i++) {
+ //      var temp = wordArray[i];
+ //      var neww = temp.substr(1, temp.length - 1) + temp.substr(0, 1) + "ay";
+ //      finalString += neww + " ";
+ //   	} 
+ //   return finalString;
+ //  }
+
+ //       console.log(toPig("Turtle Parent Sailboat"));
+
+  function toEng(inPig){
+  	var engString = "";
+  	var pigArr = inPig.split(" ")
+  	var i;
+  	for(i = 0; i < pigArr.length; i++){
+  		var temp = pigArr[i]
+  		var temp2 = temp.substr(0,temp.length - 2);
+  		var temp3 = temp2.substr(temp2.length - 1) + temp2.substr(0, temp2.length - 1);
+  		engString += temp3+" ";
+
+  	}
+  	return engString.toLowerCase();
+  }
+
+  console.log(toEng("Hetay uickqay rownbay oxfay"))
+
+		
+
+	</script>
+</body>
+</html>

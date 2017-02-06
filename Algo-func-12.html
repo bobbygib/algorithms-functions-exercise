@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+			
+	//12. Write a program to count the occurrences of all letter pairs in a sample of text (like the first paragraph of the Constitution). Disregard differences between lower and upper case letters. Output the 10 most frequent letter pairs, in order by percent of total. Your program should correctly process situations where the input string is empty or where less than 10 pairs occur.
+	// Example output:
+	// th 2.37%
+	// in 2.20%
+	// fj 2.00%
+	// ...
+
+		var input = "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defense, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America."
+
+		input = input.toLowerCase;
+
+		var bigrams = {};
+
+		for(var i = 1; i < input.length; i ++){
+			var letterPair = input[i-1] + input[i];
+
+			if(bigrams[letterPair] === undefined){
+				bigrams[letterPair] = 0;
+			}
+
+			bigrams[letterPair] = bigrams [letterPair] + 1;
+		}
+
+		console.log(bigrams)
+
+
+
+
+
+
+	</script>
+</body>
+</html>

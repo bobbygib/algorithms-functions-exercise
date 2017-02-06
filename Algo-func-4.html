@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+// 	4. Write a function which takes an array of integers and returns an array with any duplicate integers removed.
+// [1,1,2,3,1,2,3] -> [1,2,3]
+// [1,4,4,4,2,2,4,4,4] -> [1,4,2]	
+function removedInt(arr){
+	var rInt = [];
+	var i;
+	for(i = 0; i < arr.length; i++){
+		if(rInt.indexOf(arr[i]) == -1){
+			rInt.push(arr[i]);
+
+		}
+	}
+return rInt;
+}
+
+console.log(removedInt([1, 2, 1, 2, 3, 4, 6, 6, 6, 111]))
+
+	</script>
+</body>
+</html>
